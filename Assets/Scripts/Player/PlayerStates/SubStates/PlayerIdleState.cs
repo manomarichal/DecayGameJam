@@ -12,7 +12,7 @@ public class PlayerIdleState : PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
-        player.SetVelocityX(0f);
+        
     }
 
     public override void Exit()
@@ -24,9 +24,14 @@ public class PlayerIdleState : PlayerGroundedState
     {
         base.LogicUpdate();
 
-        if (xInput != 0)
+        if (xInput != 0 && !isExitingState)
         {
             stateMachine.ChangeState(player.MoveState);
+        }
+        else
+        {
+            player.AddVelocityX(-Mathf.Sign(player.CurrentVelocity.x)*playerData.friction);
+            if (player.CurrentVelocity.x < 0.1f) player.SetVelocityX(0);
         }
     }
 

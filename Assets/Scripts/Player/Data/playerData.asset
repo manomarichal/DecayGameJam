@@ -12,4 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4928f3bf58e28c0dd96dba29e0e980ab, type: 3}
   m_Name: playerData
   m_EditorClassIdentifier: 
-  movementVelocity: 10
+  movementVelocity: 1
+  maxHorizontalVelocity: 10
+  friction: 0.6
+  jumpVelocity: 20
+  amountOfJumps: 3
+  wallJumpVelocity: {x: -15, y: 20}
+  wallJumpTime: 0.4
+  wallJumpAngle: {x: 1, y: 2}
+  wallSlideVelocity: 3
+  groundCheckRadius: 0.3
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  wallCheckDistance: 0.55

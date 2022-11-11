@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,28 +9,44 @@ public class PlayerInputHandler : MonoBehaviour
     public Vector2 RawMovementInput { get; private set; }
     public int NormInputX { get; private set; }
     public int NormInputY { get; private set; }
+
+    [SerializeField] private float inputHoldtime = 0.1f;
+
+    private float jumpInputStartTime;
     
+    public bool jumpInput { get; private set; }
     public void OnMoveInput(InputAction.CallbackContext context)
     {
         RawMovementInput = context.ReadValue<Vector2>();
         NormInputX = (int)((RawMovementInput * Vector2.right).normalized.x);
-        NormInputY = (int)((RawMovementInput * Vector2.up).normalized.y); }
+        NormInputY = (int)((RawMovementInput * Vector2.up).normalized.y); 
+    }
     
     public void OnJumpInput(InputAction.CallbackContext context)
     {
         if (context.started)
         {
-            Debug.Log("jump pressed");
+            GetComponent<Player>().Anim.SetBool("inair", true);
+            jumpInput = true;
+            jumpInputStartTime = Time.time;
         }
+    }
 
-        if (context.performed)
-        {
-            Debug.Log("jump held");
-        }
+    public void consumeJumpInput()
+    {
+        jumpInput = false;
+    }
 
-        if (context.canceled)
+    private void Update()
+    {
+        CheckJumpInputHoldTime();
+    }
+
+    private void CheckJumpInputHoldTime()
+    {
+        if (Time.time >= jumpInputStartTime + inputHoldtime)
         {
-            Debug.Log("released");
-        }
+            jumpInput = false;
+        };
     }
 }
