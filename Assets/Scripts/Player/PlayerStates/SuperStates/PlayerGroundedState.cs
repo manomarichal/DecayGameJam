@@ -31,13 +31,18 @@ public class PlayerGroundedState : PlayerState
         
         if (jumpInput && player.JumpState.CanJump())
         {
-            player.InputHandler.consumeJumpInput();
+            player.InputHandler.ConsumeJumpInput();
             stateMachine.ChangeState(player.JumpState);
         }
         else if (!player.CheckIfGrounded())
         {
             player.JumpState.DecreaseAmountOfJumpsLeft();
             stateMachine.ChangeState(player.InAirState);
+        }
+        else if (player.InputHandler.RangedAttackInput)
+        {
+            player.RangedAttack();
+            player.InputHandler.ConsumeRangedAttackInput();
         }
     }
 

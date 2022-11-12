@@ -23,7 +23,6 @@ public class PlayerInAirState : PlayerState
 
     public override void LogicUpdate()
     {
-        base.LogicUpdate();
         xInput = player.InputHandler.NormInputX;
         jumpInput = player.InputHandler.jumpInput;
         
@@ -34,11 +33,16 @@ public class PlayerInAirState : PlayerState
         else if (jumpInput && player.JumpState.CanJump())
         {
             stateMachine.ChangeState(player.JumpState);
-            player.InputHandler.consumeJumpInput();
+            player.InputHandler.ConsumeJumpInput();
         }
         else if (player.IsTouchingWall() && xInput == player.FacingDirection && player.CurrentVelocity.y <= 0)
         {
             stateMachine.ChangeState(player.WallSlideState);
+        }
+        else if (player.InputHandler.RangedAttackInput)
+        {
+            player.RangedAttack();
+            player.InputHandler.ConsumeRangedAttackInput();
         }
         else
         {

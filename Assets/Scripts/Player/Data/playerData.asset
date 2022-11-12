@@ -12,17 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4928f3bf58e28c0dd96dba29e0e980ab, type: 3}
   m_Name: playerData
   m_EditorClassIdentifier: 
-  movementVelocity: 1
-  maxHorizontalVelocity: 10
-  friction: 0.6
-  jumpVelocity: 20
-  amountOfJumps: 3
-  wallJumpVelocity: {x: -15, y: 20}
-  wallJumpTime: 0.4
-  wallJumpAngle: {x: 1, y: 2}
-  wallSlideVelocity: 3
-  groundCheckRadius: 0.3
+  movementVelocity: 0.24
+  maxHorizontalVelocity: 3
+  friction: 0.1
+  jumpVelocity: 7
+  amountOfJumps: 1
+  wallJumpVelocity: {x: 4, y: 7}
+  wallSlideVelocity: 1
+  wallSlideLetGoDelay: 0.5
+  wallJumpTime: 0.1
+  groundCheckRadius: 0.05
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-  wallCheckDistance: 0.55
+  wallCheckDistance: 0.15
+  acornPrefab: {fileID: 5578131163103206636, guid: 3fa4818a7d8ade13ab01e88b3e76bda3, type: 3}
+  acornSpawnPoint: {fileID: 0}
+  rangedAttackCooldown: 0.5

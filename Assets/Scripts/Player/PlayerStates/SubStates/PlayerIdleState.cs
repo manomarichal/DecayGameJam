@@ -30,9 +30,15 @@ public class PlayerIdleState : PlayerGroundedState
         }
         else
         {
-            player.AddVelocityX(-Mathf.Sign(player.CurrentVelocity.x)*playerData.friction);
-            if (player.CurrentVelocity.x < 0.1f) player.SetVelocityX(0);
-        }
+            if (Mathf.Abs(player.CurrentVelocity.x) < 1f)
+            {
+                player.SetVelocityX(0);
+            }
+            else
+            {
+                player.AddVelocityX(-Mathf.Sign(player.CurrentVelocity.x)*playerData.friction);
+            }
+        }   
     }
 
     public override void PhysicsUpdate()

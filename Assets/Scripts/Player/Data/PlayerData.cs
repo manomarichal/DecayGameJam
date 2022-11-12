@@ -16,13 +16,18 @@ public class PlayerData : ScriptableObject
 
     [Header("Wall Jumps")]
     public Vector2 wallJumpVelocity = new Vector2(20, 20);
-    public float wallJumpTime = 0.4f;
-    public Vector2 wallJumpAngle = new Vector2(1, 2);
     public float wallSlideVelocity = 3f;
+    public float wallSlideLetGoDelay = 0.1f;
+    public float wallJumpTime = 0.2f;
 
     [Header("Check Variables")] 
     public float groundCheckRadius = 0.3f;
     public LayerMask whatIsGround;
     public float wallCheckDistance = 0.5f;
+
+    [Header(("Combat Variables"))] 
+    public GameObject acornPrefab;
+    public GameObject acornSpawnPoint;
+    public float rangedAttackCooldown = 1;
 
 }

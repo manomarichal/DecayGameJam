@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public PlayerWallClimbState WallClimbState { get; private set; }
     public PlayerWallSlideState WallSlideState { get; private set; }
     public PlayerWallJumpState WallJumpState { get; private set; }
+    public PlayerRangedAttackState RangedAttackState { get; private set; }
     
     [SerializeField] private PlayerData _playerData;
     #endregion
@@ -34,9 +35,13 @@ public class Player : MonoBehaviour
     #endregion
     
     #region Other Variables
+    
     public int FacingDirection { get; private set; }
     public Vector2 CurrentVelocity { get; private set; }
+    public Camera mainCamera;
     private Vector2 tempVelocity;
+    private float _RangedAttackStartTime;
+    
     #endregion
 
     #region Unity Callback Functions
@@ -49,8 +54,9 @@ public class Player : MonoBehaviour
         JumpState = new PlayerJumpState(this, StateMachine, _playerData, "Jump");
         InAirState = new PlayerInAirState(this, StateMachine, _playerData, "Jump");
         WallClimbState = new PlayerWallClimbState(this, StateMachine, _playerData, "Jump");
-        WallSlideState = new PlayerWallSlideState(this, StateMachine, _playerData, "Jump");
+        WallSlideState = new PlayerWallSlideState(this, StateMachine, _playerData, "Wallslide");
         WallJumpState = new PlayerWallJumpState(this, StateMachine, _playerData, "Jump");
+        RangedAttackState = new PlayerRangedAttackState(this, StateMachine, _playerData, "RangedAttack");
     }
     
     // Start is called before the first frame update
@@ -62,6 +68,7 @@ public class Player : MonoBehaviour
         Sr = GetComponent<SpriteRenderer>();
         FacingDirection = 1;
         StateMachine.Initialize(IdleState);
+        _RangedAttackStartTime = Time.time;
     }
 
     // Update is called once per frame
@@ -120,6 +127,7 @@ public class Player : MonoBehaviour
         Debug.DrawRay(_wallCheck.position,new Vector3(_playerData.wallCheckDistance*FacingDirection, 0, 0), Color.red, 5.0f);
         return Physics2D.Raycast(_wallCheck.position, new Vector3(FacingDirection, 0, 0), _playerData.wallCheckDistance, _playerData.whatIsGround);
     }
+    
     #endregion
 
     #region Other Functions
@@ -128,6 +136,7 @@ public class Player : MonoBehaviour
         FacingDirection *= -1;
         Sr.flipX = !Sr.flipX;
     }
+    
     #endregion
 
     #region Movement
@@ -141,6 +150,24 @@ public class Player : MonoBehaviour
         CurrentVelocity = tempVelocity;
     }
 
+    #endregion
+    
+    #region Combat
+
+    private bool CheckIfCanDoRangedAttack()
+    {
+        return _RangedAttackStartTime + _playerData.rangedAttackCooldown < Time.time;
+    }
+    public void RangedAttack()
+    {
+        if (!CheckIfCanDoRangedAttack()) return;
+
+        _RangedAttackStartTime = Time.time;
+        
+        InputHandler.ConsumeRangedAttackInput();
+        StateMachine.ChangeState(RangedAttackState);
+    }
+    
     #endregion
 
 }

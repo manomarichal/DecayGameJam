@@ -12,16 +12,17 @@ public class PlayerWallJumpState : PlayerState
     public override void Enter()
     {
         base.Enter();
-        player.JumpState.ResetAmountOfJumpsLeft();
         player.SetVelocityY(playerData.wallJumpVelocity.y);
-        player.SetVelocityX(playerData.wallJumpVelocity.x);
-        player.JumpState.DecreaseAmountOfJumpsLeft();
-        stateMachine.ChangeState(player.InAirState);
+        player.SetVelocityX(playerData.wallJumpVelocity.x * player.WallSlideState.SlideDirection *-1);
     }
 
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+        if (Time.time - startTime > playerData.wallJumpTime)
+        {
+            stateMachine.ChangeState(player.InAirState);
+        }
     }
 
     public override void Exit()
