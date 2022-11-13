@@ -13,6 +13,7 @@ public class PlayerData : ScriptableObject
     [Header("Jumping")]
     public float jumpVelocity = 15f;
     public int amountOfJumps = 3;
+    public float gravityScale = 2f;
 
     [Header("Wall Jumps")]
     public Vector2 wallJumpVelocity = new Vector2(20, 20);

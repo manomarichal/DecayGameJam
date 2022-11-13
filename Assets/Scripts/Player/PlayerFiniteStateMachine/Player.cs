@@ -7,6 +7,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     #region State Variables
+    
     public PlayerStateMachine StateMachine { get; private set; }
     public PlayerState IdleState { get; private set; }
     public PlayerMoveState MoveState { get; private set; }
@@ -16,15 +17,17 @@ public class Player : MonoBehaviour
     public PlayerWallSlideState WallSlideState { get; private set; }
     public PlayerWallJumpState WallJumpState { get; private set; }
     public PlayerRangedAttackState RangedAttackState { get; private set; }
-    
     [SerializeField] private PlayerData _playerData;
+   
     #endregion
 
     #region Components
+    
     public Animator Anim { get; private set; }
     public PlayerInputHandler InputHandler { get; private set; }
     public Rigidbody2D Rb { get; private set; }
     public SpriteRenderer Sr { get; private set; }
+    
     #endregion
 
     #region  Check Transforms
@@ -45,6 +48,7 @@ public class Player : MonoBehaviour
     #endregion
 
     #region Unity Callback Functions
+    
     private void Awake()
     {
         StateMachine = new PlayerStateMachine();
@@ -69,6 +73,7 @@ public class Player : MonoBehaviour
         FacingDirection = 1;
         StateMachine.Initialize(IdleState);
         _RangedAttackStartTime = Time.time;
+        Rb.gravityScale = _playerData.gravityScale;
     }
 
     // Update is called once per frame
@@ -82,9 +87,11 @@ public class Player : MonoBehaviour
     {
         StateMachine.CurrentState.PhysicsUpdate();
     }
+    
     #endregion
 
     #region Set Functions
+    
     public void SetVelocityX(float velocity)
     {
         tempVelocity.Set(velocity, CurrentVelocity.y);
@@ -106,9 +113,11 @@ public class Player : MonoBehaviour
         Rb.velocity = tempVelocity;
         CurrentVelocity = tempVelocity;
     }
+    
     #endregion
     
     #region Check Functions
+    
     public bool CheckIfGrounded()
     {
         return Physics2D.OverlapCircle(_groundCheck.position, _playerData.groundCheckRadius, _playerData.whatIsGround);
@@ -131,6 +140,7 @@ public class Player : MonoBehaviour
     #endregion
 
     #region Other Functions
+    
     private void FlipDirection()
     {
         FacingDirection *= -1;
