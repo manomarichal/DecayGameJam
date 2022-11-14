@@ -31,4 +31,8 @@ public class PlayerData : ScriptableObject
     public GameObject acornSpawnPoint;
     public float rangedAttackCooldown = 1;
 
+    [Header(("Other Variables"))] 
+    public float delayAfterDeath = 1f;
+
+
 }

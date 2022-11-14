@@ -9,7 +9,6 @@ public class RoomCameraManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Player");
         if (other.CompareTag("Player") && !other.isTrigger)
         {
             virtualCamera.SetActive(true);

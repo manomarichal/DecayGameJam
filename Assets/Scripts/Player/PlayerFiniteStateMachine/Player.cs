@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     public PlayerWallSlideState WallSlideState { get; private set; }
     public PlayerWallJumpState WallJumpState { get; private set; }
     public PlayerRangedAttackState RangedAttackState { get; private set; }
+    public PlayerDeathState DeathState { get; private set; }
     [SerializeField] private PlayerData _playerData;
    
     #endregion
@@ -42,6 +43,8 @@ public class Player : MonoBehaviour
     public int FacingDirection { get; private set; }
     public Vector2 CurrentVelocity { get; private set; }
     public Camera mainCamera;
+    public Vector3 respawnPosition;
+
     private Vector2 tempVelocity;
     private float _RangedAttackStartTime;
     
@@ -61,6 +64,7 @@ public class Player : MonoBehaviour
         WallSlideState = new PlayerWallSlideState(this, StateMachine, _playerData, "Wallslide");
         WallJumpState = new PlayerWallJumpState(this, StateMachine, _playerData, "Jump");
         RangedAttackState = new PlayerRangedAttackState(this, StateMachine, _playerData, "RangedAttack");
+        DeathState = new PlayerDeathState(this, StateMachine, _playerData, "Death");
     }
     
     // Start is called before the first frame update
@@ -70,10 +74,13 @@ public class Player : MonoBehaviour
         InputHandler = GetComponent<PlayerInputHandler>();
         Rb = GetComponent<Rigidbody2D>();
         Sr = GetComponent<SpriteRenderer>();
+        
         FacingDirection = 1;
-        StateMachine.Initialize(IdleState);
         _RangedAttackStartTime = Time.time;
         Rb.gravityScale = _playerData.gravityScale;
+        respawnPosition = transform.position;
+        
+        StateMachine.Initialize(IdleState);
     }
 
     // Update is called once per frame

@@ -5,30 +5,29 @@ using UnityEngine;
 public class Acorn : MonoBehaviour
 {
     public float velocity;
-    private Camera _camera;
+    public float maxDistance = 50f;
+ 
     private int _direction = 1;
     private bool _isInitialized = false;
+    private float _distanceTravelled;
+    
     public void Initialize(int direction, Camera mainCamera)
     {
         _direction = direction;
-        _camera = mainCamera;
         _isInitialized = true;
     }
     
-    public void SetDirection(int direction)
-    {
-    }
 
     private void Update()
     {
         if (!_isInitialized) return;
+
+        var distance = velocity * _direction * Time.deltaTime;
         
-        transform.position = new Vector3(transform.position.x + velocity * _direction, transform.position.y,
-            transform.position.z);
-        
-        // Destroy object if it is out of view
-        Vector3 viewPos = _camera.WorldToViewportPoint(transform.position);
-        if (!(viewPos.x >= 0 && viewPos.x <= 1 && viewPos.y >= 0 && viewPos.y <= 1 && viewPos.z > 0))
+        transform.position += new Vector3(distance ,0, 0);
+        _distanceTravelled += distance;
+
+        if (_distanceTravelled > maxDistance)
         {
             Destroy(gameObject);
         }

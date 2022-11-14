@@ -5,11 +5,9 @@ using UnityEngine;
 
 public class RespawnOnTouchDeadly : MonoBehaviour
 {
-    public Vector3 respawnPosition;
     private Player _player;
     private void Start()
     {
-        respawnPosition = transform.position;
         _player = GetComponent<Player>();
     }
 
@@ -17,8 +15,7 @@ public class RespawnOnTouchDeadly : MonoBehaviour
     {
         if (collision.collider.gameObject.CompareTag("Deadly"))
         {
-            transform.position = respawnPosition;
-            _player.StateMachine.ChangeState(_player.IdleState);
+            _player.StateMachine.ChangeState(_player.DeathState);
         }
     }
 }
