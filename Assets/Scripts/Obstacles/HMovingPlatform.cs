@@ -66,8 +66,6 @@ public class HMovingPlatform : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("enter");
-        
         if (collision.collider.CompareTag("Player"))
         {
             _player = collision.collider.gameObject;
@@ -77,8 +75,6 @@ public class HMovingPlatform : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D other)
     {
-        Debug.Log("exit");
-
         if (other.collider.CompareTag("Player"))
         {
             _isTouchingPlayer = false;
