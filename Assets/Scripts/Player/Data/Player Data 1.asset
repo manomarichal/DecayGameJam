@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4928f3bf58e28c0dd96dba29e0e980ab, type: 3}
+  m_Name: Player Data 1
+  m_EditorClassIdentifier: 
+  movementVelocity: 1
+  maxHorizontalVelocity: 10
+  friction: 0.4
+  jumpVelocity: 15
+  amountOfJumps: 3
+  gravityScale: 2
+  wallJumpVelocity: {x: 20, y: 20}
+  wallSlideVelocity: 3
+  wallSlideLetGoDelay: 0.1
+  wallJumpTime: 0.2
+  groundCheckRadius: 0.3
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  wallCheckDistance: 0.5
+  acornPrefab: {fileID: 0}
+  acornSpawnPoint: {fileID: 0}
+  rangedAttackCooldown: 1
+  delayAfterDeath: 1

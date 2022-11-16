@@ -22,10 +22,12 @@ public class SideToSideWalking : MonoBehaviour
 
     private void Update()
     {
-        // Debug.DrawRay(downRayOrigin.position, new Vector3(0, -5, 0), Color.blue, 2f);
+        Debug.DrawRay(downRayOrigin.position, new Vector3(0, -5, 0), Color.red, 2f);
         _isTouchingGround = Physics2D.Raycast(downRayOrigin.position, Vector2.down, downRaySize, whatIsGround);
+       
         Debug.DrawRay(sideRayOrigin.position, new Vector3(sideRaySize, 0, 0), Color.blue, 0.1f);
         _isTouchingWall = Physics2D.Raycast(sideRayOrigin.position, Vector2.right*_direction, sideRaySize, whatIsGround);
+        
         if (!_isTouchingGround || _isTouchingWall)
         {   
             _direction *= -1;
