@@ -14,12 +14,14 @@ public class PlayerData : ScriptableObject
     public float jumpVelocity = 15f;
     public int amountOfJumps = 3;
     public float gravityScale = 2f;
+    public float linearDamp = 0f;
 
     [Header("Wall Jumps")]
     public Vector2 wallJumpVelocity = new Vector2(20, 20);
     public float wallSlideVelocity = 3f;
     public float wallSlideLetGoDelay = 0.1f;
     public float wallJumpTime = 0.2f;
+    public bool canWallJump = true;
 
     [Header("Check Variables")] 
     public float groundCheckRadius = 0.3f;
@@ -30,7 +32,8 @@ public class PlayerData : ScriptableObject
     public GameObject acornPrefab;
     public GameObject acornSpawnPoint;
     public float rangedAttackCooldown = 1;
-
+    public bool canRangedAttack = true;
+    
     [Header(("Other Variables"))] 
     public float delayAfterDeath = 1f;
 

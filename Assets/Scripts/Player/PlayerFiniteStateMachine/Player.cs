@@ -86,6 +86,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        Rb.drag = _playerData.linearDamp;
         CurrentVelocity = Rb.velocity;
         StateMachine.CurrentState.LogicUpdate();
     }

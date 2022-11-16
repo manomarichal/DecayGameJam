@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4928f3bf58e28c0dd96dba29e0e980ab, type: 3}
-  m_Name: playerData0
+  m_Name: playerData3
   m_EditorClassIdentifier: 
   movementVelocity: 0.25
-  maxHorizontalVelocity: 4.5
+  maxHorizontalVelocity: 2.5
   friction: 0.2
-  jumpVelocity: 7
-  amountOfJumps: 2
-  gravityScale: 1.5
+  jumpVelocity: 4
+  amountOfJumps: 1
+  gravityScale: 1
   linearDamp: 0
-  wallJumpVelocity: {x: 4, y: 7}
+  wallJumpVelocity: {x: 2.5, y: 3.5}
   wallSlideVelocity: 1
   wallSlideLetGoDelay: 0.5
   wallJumpTime: 0.1
@@ -32,5 +32,5 @@ MonoBehaviour:
   acornPrefab: {fileID: 5246547503019828616, guid: 29a6916564fd904b5a1ce6c2152e391f, type: 3}
   acornSpawnPoint: {fileID: 0}
   rangedAttackCooldown: 0.5
-  canRangedAttack: 1
+  canRangedAttack: 0
   delayAfterDeath: 0.5

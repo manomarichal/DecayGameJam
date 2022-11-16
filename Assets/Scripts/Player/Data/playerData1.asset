@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4928f3bf58e28c0dd96dba29e0e980ab, type: 3}
-  m_Name: playerData0
+  m_Name: playerData1
   m_EditorClassIdentifier: 
   movementVelocity: 0.25
-  maxHorizontalVelocity: 4.5
+  maxHorizontalVelocity: 3.5
   friction: 0.2
-  jumpVelocity: 7
+  jumpVelocity: 6
   amountOfJumps: 2
   gravityScale: 1.5
   linearDamp: 0
-  wallJumpVelocity: {x: 4, y: 7}
+  wallJumpVelocity: {x: 4, y: 6}
   wallSlideVelocity: 1
   wallSlideLetGoDelay: 0.5
   wallJumpTime: 0.1
