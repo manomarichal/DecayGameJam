@@ -5,17 +5,13 @@ using UnityEngine;
 
 public class RespawnOnTouchDeadly : MonoBehaviour
 {
-    private Player _player;
-    private void Start()
+    public Player player;
+    
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        _player = GetComponent<Player>();
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.gameObject.CompareTag("Deadly"))
+        if (other.gameObject.CompareTag("Deadly"))
         {
-            _player.StateMachine.ChangeState(_player.DeathState);
+            player.StateMachine.ChangeState(player.DeathState);
         }
     }
 }

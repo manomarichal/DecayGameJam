@@ -11,7 +11,7 @@ public class Acorn : MonoBehaviour
     private bool _isInitialized = false;
     private float _distanceTravelled;
     
-    public void Initialize(int direction, Camera mainCamera)
+    public void Initialize(int direction)
     {
         _direction = direction;
         _isInitialized = true;

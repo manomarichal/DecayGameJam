@@ -13,7 +13,7 @@ public class PlayerRangedAttackState : PlayerAbilityState
     {
         base.Enter();
         GameObject acorn = GameObject.Instantiate(playerData.acornPrefab, player.transform.position, Quaternion.identity);
-        acorn.GetComponent<Acorn>().Initialize(player.FacingDirection, player.mainCamera);
+        acorn.GetComponent<Acorn>().Initialize(player.FacingDirection);
         isAbilityDone = true;
     }
 

@@ -10,6 +10,15 @@ public class BranchSpawner : MonoBehaviour
     
     private float _lastSpawnTime;
 
+    private void Start()
+    {
+        var sr = GetComponent<SpriteRenderer>();
+        if (sr != null)
+        {
+            sr.enabled = false;
+        }
+    }
+
     void spawnBranch()
     {
         Instantiate(branchPrefab, transform.position, Quaternion.identity);

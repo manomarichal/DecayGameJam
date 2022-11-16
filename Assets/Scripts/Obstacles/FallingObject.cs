@@ -30,9 +30,4 @@ public class FallingObject : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        Destroy(this);
-    }
 }

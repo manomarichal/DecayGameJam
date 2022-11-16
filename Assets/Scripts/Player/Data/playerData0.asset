@@ -27,6 +27,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   wallCheckDistance: 0.15
-  acornPrefab: {fileID: 5578131163103206636, guid: 3fa4818a7d8ade13ab01e88b3e76bda3, type: 3}
+  acornPrefab: {fileID: 5246547503019828616, guid: 29a6916564fd904b5a1ce6c2152e391f, type: 3}
   acornSpawnPoint: {fileID: 0}
   rangedAttackCooldown: 0.5
+  delayAfterDeath: 0.5

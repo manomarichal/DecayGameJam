@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1493183132225085858}
   - component: {fileID: 934438045959012611}
   - component: {fileID: 7153067420719095184}
-  - component: {fileID: 1799046204794586041}
+  - component: {fileID: 1185810393120631691}
   m_Layer: 0
   m_Name: FallingBranch
   m_TagString: Deadly
@@ -101,16 +101,37 @@ MonoBehaviour:
   fallingSpeed: 5
   rotationSpeed: 20
   maxDistance: 20
---- !u!65 &1799046204794586041
-BoxCollider:
+--- !u!60 &1185810393120631691
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7004554686859552577}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.8, y: 0.58, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.8, y: 0.58}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.05986355, y: -0.06894855}
+      - {x: 0.14964934, y: -0.25769114}
+      - {x: 0.23070985, y: -0.24446358}
+      - {x: 0.11924197, y: -0.044780787}
+      - {x: 0.3432697, y: 0.06421352}
+      - {x: 0.27880353, y: 0.17132024}
+      - {x: 0.025090396, y: 0.07270249}
+      - {x: -0.42474926, y: -0.053028688}
+      - {x: -0.259252, y: -0.19126338}
