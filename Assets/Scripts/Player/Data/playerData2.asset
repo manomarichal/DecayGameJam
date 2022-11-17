@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementVelocity: 0.25
   maxHorizontalVelocity: 3
-  friction: 0.2
+  friction: 0.3
   jumpVelocity: 5.5
-  amountOfJumps: 2
+  amountOfJumps: 1
   gravityScale: 1.5
   linearDamp: 0
   wallJumpVelocity: {x: 3, y: 5.5}

@@ -30,4 +30,13 @@ public class FallingObject : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Ground"))
+        {
+            Debug.Log("ground");
+            Destroy(gameObject);
+        }
+    }
 }

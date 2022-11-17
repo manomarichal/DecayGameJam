@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 934438045959012611}
   - component: {fileID: 7153067420719095184}
   - component: {fileID: 1185810393120631691}
+  - component: {fileID: 1617539681855687159}
   m_Layer: 0
   m_Name: FallingBranch
   m_TagString: Deadly
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7004554686859552577}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -99,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallingSpeed: 5
-  rotationSpeed: 20
+  rotationSpeed: 80
   maxDistance: 20
 --- !u!60 &1185810393120631691
 PolygonCollider2D:
@@ -126,12 +127,33 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.05986355, y: -0.06894855}
-      - {x: 0.14964934, y: -0.25769114}
+    - - {x: -0.0022686422, y: 0.04915858}
+      - {x: -0.40431625, y: -0.081494}
+      - {x: -0.23102486, y: -0.21368721}
+      - {x: 0.026704416, y: -0.11216448}
+      - {x: 0.1442895, y: -0.27623713}
       - {x: 0.23070985, y: -0.24446358}
-      - {x: 0.11924197, y: -0.044780787}
-      - {x: 0.3432697, y: 0.06421352}
-      - {x: 0.27880353, y: 0.17132024}
-      - {x: 0.025090396, y: 0.07270249}
-      - {x: -0.42474926, y: -0.053028688}
-      - {x: -0.259252, y: -0.19126338}
+      - {x: 0.13178736, y: -0.054817103}
+      - {x: 0.34326965, y: 0.12192236}
+      - {x: 0.25453982, y: 0.23883763}
+--- !u!50 &1617539681855687159
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7004554686859552577}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
