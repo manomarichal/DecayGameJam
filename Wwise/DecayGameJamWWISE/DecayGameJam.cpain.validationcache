@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="110">
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Virtual Acoustics\Factory Acoustic Textures.wwu" DateLow="1668619786" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Virtual Acoustics\Default Work Unit.wwu" DateLow="1668762617" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Triggers\Default Work Unit.wwu" DateLow="1668762617" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Switches\Default Work Unit.wwu" DateLow="1668772227" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\States\Default Work Unit.wwu" DateLow="1668772227" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1668762617" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\SoundBanks\Default Work Unit.wwu" DateLow="1668762617" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Queries\Factory Queries.wwu" DateLow="1668619786" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Queries\Default Work Unit.wwu" DateLow="1668762617" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Presets\Factory Spatial Audio.wwu" DateLow="1668619786" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Presets\Default Work Unit.wwu" DateLow="1668762617" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Modulators\Default Work Unit.wwu" DateLow="1668762617" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Mixing Sessions\Default Work Unit.wwu" DateLow="1668762617" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Metadata\Default Work Unit.wwu" DateLow="1668762617" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1668762617" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1668772227" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Game Parameters\Default Work Unit.wwu" DateLow="1668762617" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Events\Default Work Unit.wwu" DateLow="1668772227" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Effects\Factory Mastering Suite.wwu" DateLow="1668619916" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Effects\Factory Effects.wwu" DateLow="1668619786" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Effects\Default Work Unit.wwu" DateLow="1668762617" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1668762617" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\DecayGameJam.wproj" DateLow="1668772679" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\DecayGameJam.cpain.wsettings" DateLow="1668772231" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1668619786" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Conversion Settings\Default Work Unit.wwu" DateLow="1668762617" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Control Surface Sessions\Default Work Unit.wwu" DateLow="1668762617" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Audio Devices\Default Work Unit.wwu" DateLow="1668762617" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Attenuations\Default Work Unit.wwu" DateLow="1668762617" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Actor-Mixer Hierarchy\Factory Synth One.wwu" DateLow="1668619786" DateHigh="0"/>
+	<ValidationCacheItem File="E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1668772227" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\cpain\Documents\WwiseProjects\DecayGameJam\Virtual Acoustics\Factory Acoustic Textures.wwu" DateLow="1668619786" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\cpain\Documents\WwiseProjects\DecayGameJam\Virtual Acoustics\Default Work Unit.wwu" DateLow="1668762617" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\cpain\Documents\WwiseProjects\DecayGameJam\Triggers\Default Work Unit.wwu" DateLow="1668762617" DateHigh="0"/>

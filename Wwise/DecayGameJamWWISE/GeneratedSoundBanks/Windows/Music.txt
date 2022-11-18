@@ -1,0 +1,74 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2302270969	Set_State_Menu			\Default Work Unit\Set_State_Menu	
+	3081231600	Set_State_Part1			\Default Work Unit\Set_State_Part1	
+	3081231602	Set_State_Part3			\Default Work Unit\Set_State_Part3	
+	3081231603	Set_State_Part2			\Default Work Unit\Set_State_Part2	
+	3081231604	Set_State_Part5			\Default Work Unit\Set_State_Part5	
+	3081231605	Set_State_Part4			\Default Work Unit\Set_State_Part4	
+	3991942870	Music			\Default Work Unit\Music	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	3773774313	Music_Game_State			\Default Work Unit\Music_Game_State	
+
+Switch	ID	Name	Switch Group			Notes
+	2607556080	Menu	Music_Game_State			
+	2967546505	In_Game	Music_Game_State			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	2967546505	In_Game			\Default Work Unit\In_Game	
+
+State	ID	Name	State Group			Notes
+	748895195	None	In_Game			
+	3177314144	Part2	In_Game			
+	3177314145	Part3	In_Game			
+	3177314147	Part1	In_Game			
+	3177314150	Part4	In_Game			
+	3177314151	Part5	In_Game			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	28399385	Part2_Transition_132bpm_1bar	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 2\Part2_Transition_132bpm_1bar_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Trans2-3\Part2_Transition_132bpm_1bar		499204
+	53766934	Part1_Chords_140bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 1\Part1_Chords_140bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 1\Part1\Part1_Chords_140bpm_8bars		3120676
+	64875878	Part2_3rdSynth_132bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 2\Part2_3rdSynth_132bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 2\Part 2\Part2_3rdSynth_132bpm_8bars		2858436
+	78720930	Part1_2ndSynth_140bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 1\Part1_2ndSynth_140bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 1\Part1\Part1_2ndSynth_140bpm_8bars		2858420
+	113413894	Part2_Drums_132bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 2\Part2_Drums_132bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 2\Part 2\Part2_Drums_132bpm_8bars		2858436
+	113474453	Part2_MainSynth_132bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 2\Part2_MainSynth_132bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 2\Part 2\Part2_MainSynth_132bpm_8bars		2858436
+	115193708	Part3_Drums_124bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 3\Part3_Drums_124bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 3\Part 3\Part3_Drums_124bpm_8bars		3120580
+	169316394	Part1_Pad_140bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 1\Part1_Pad_140bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 1\Part1\Part1_Pad_140bpm_8bars		3382820
+	188574936	Intro_Pad_140bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Intro\Intro_Pad_140bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 1\Intro\Intro_Pad_140bpm_8bars		3906996
+	196855001	Part5_MainSynth_108bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 5\Part5_MainSynth_108bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 5\Part 5\Part5_MainSynth_108bpm_8bars		3644772
+	215988225	Part1_3rdSynth_140bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 1\Part1_3rdSynth_140bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 1\Part1\Part1_3rdSynth_140bpm_8bars		2858420
+	298967802	Part2_Chords_132bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 2\Part2_Chords_132bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 2\Part 2\Part2_Chords_132bpm_8bars		3382836
+	328805332	Part4_Transition_116bpm_1bar	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 4\Part4_Transition_116bpm_1bar_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Trans4-5\Part4_Transition_116bpm_1bar		499140
+	351002072	Part4_Drums_116bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 4\Part4_Drums_116bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 4\Part 4\Part4_Drums_116bpm_8bars		3382724
+	361311069	Part2_2ndSynth_132bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 2\Part2_2ndSynth_132bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 2\Part 2\Part2_2ndSynth_132bpm_8bars		2858436
+	363274894	Part2_Bass_132bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 2\Part2_Bass_132bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 2\Part 2\Part2_Bass_132bpm_8bars		2858436
+	383851893	Part5_Drums_108bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 5\Part5_Drums_108bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 5\Part 5\Part5_Drums_108bpm_8bars		3644772
+	393686422	Part4_MainSynth_116bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 4\Part4_MainSynth_116bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 4\Part 4\Part4_MainSynth_116bpm_8bars		3382724
+	415464540	Part4_Pad_116bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 4\Part4_Pad_116bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 4\Part 4\Part4_Pad_116bpm_8bars		3907076
+	432232909	Part3_3rdSynth_124bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 3\Part3_3rdSynth_124bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 3\Part 3\Part3_3rdSynth_124bpm_8bars		3120580
+	460592813	Part1_Transition_140bpm_1bar	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 1\Part1_Transition_140bpm_1bar_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Trans1-2\Part1_Transition_140bpm_1bar		499188
+	487190095	Part3_Transition_124bpm_1bar	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 3\Part3_Transition_124bpm_1bar_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Trans3-4\Part3_Transition_124bpm_1bar		499188
+	509867068	Part3_2ndSynth_124bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 3\Part3_2ndSynth_124bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 3\Part 3\Part3_2ndSynth_124bpm_8bars		3120580
+	521424832	Part4_Bass_116bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 4\Part4_Bass_116bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 4\Part 4\Part4_Bass_116bpm_8bars		3382724
+	523970208	Intro_Drums_140bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Intro\Intro_Drums_140bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 1\Intro\Intro_Drums_140bpm_8bars		2858420
+	594583545	Part3_Pad_124bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 3\Part3_Pad_124bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 3\Part 3\Part3_Pad_124bpm_8bars		3644980
+	622950876	Part5_Bass_108bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 5\Part5_Bass_108bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 5\Part 5\Part5_Bass_108bpm_8bars		3644772
+	700800930	Part1_Bass_140bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 1\Part1_Bass_140bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 1\Part1\Part1_Bass_140bpm_8bars		2858420
+	721303269	Part5_Pad_108bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 5\Part5_Pad_108bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 5\Part 5\Part5_Pad_108bpm_8bars		4169060
+	748721930	Part4_2ndSynth_116bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 4\Part4_2ndSynth_116bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 4\Part 4\Part4_2ndSynth_116bpm_8bars		3382724
+	762248162	Intro_2ndSynth_140bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Intro\Intro_2ndSynth_140bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 1\Intro\Intro_2ndSynth_140bpm_8bars		2858420
+	762683913	Part3_MainSynth_124bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 3\Part3_MainSynth_124bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 3\Part 3\Part3_MainSynth_124bpm_8bars		3120580
+	812580682	Part5_3rdSynth_108bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 5\Part5_3rdSynth_108bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 5\Part 5\Part5_3rdSynth_108bpm_8bars		3413556
+	841119306	Part3_Bass_124bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 3\Part3_Bass_124bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 3\Part 3\Part3_Bass_124bpm_8bars		3120580
+	872109677	Part3_Chords_124bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 3\Part3_Chords_124bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 3\Part 3\Part3_Chords_124bpm_8bars		3382836
+	884779165	Part2_Pad_132bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 2\Part2_Pad_132bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 2\Part 2\Part2_Pad_132bpm_8bars		3382836
+	934063109	Part5_Chords_108bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 5\Part5_Chords_108bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 5\Part 5\Part5_Chords_108bpm_8bars		3644772
+	935770042	Part4_Chords_116bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 4\Part4_Chords_116bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 4\Part 4\Part4_Chords_116bpm_8bars		3644932
+	952671713	Intro_MainSynth_140bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Intro\Intro_MainSynth_140bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 1\Intro\Intro_MainSynth_140bpm_8bars		2858420
+	957635191	Part5_2ndSynth_108bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 5\Part5_2ndSynth_108bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 5\Part 5\Part5_2ndSynth_108bpm_8bars		3644772
+	958517125	Intro_Bass_140bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Intro\Intro_Bass_140bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 1\Intro\Intro_Bass_140bpm_8bars		2858420
+	965321397	Part1_MainSynth_140bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 1\Part1_MainSynth_140bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 1\Part1\Part1_MainSynth_140bpm_8bars		2858420
+	983178204	Intro_Chords_140bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Intro\Intro_Chords_140bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 1\Intro\Intro_Chords_140bpm_8bars		3120564
+	985140034	Part4_3rdSynth_116bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 4\Part4_3rdSynth_116bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 4\Part 4\Part4_3rdSynth_116bpm_8bars		3382724
+	1030904427	Part1_Drums_140bpm_8bars	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\Music\Part 1\Part1_Drums_140bpm_8bars_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\In_Game\Part 1\Part1\Part1_Drums_140bpm_8bars		2858420
+

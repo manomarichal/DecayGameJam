@@ -13,6 +13,17 @@
 						<State Name="Part3" ID="{37F3EE93-F3B3-4EE6-9FB8-E03057332923}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="Music" ID="{79E97555-DEC6-4558-BB85-675D11627FCB}">
+					<ChildrenList>
+						<State Name="None" ID="{D403ED7C-C15C-4C5F-90C5-6341D31B19AF}"/>
+						<State Name="In_Game" ID="{A6BA1A38-9B1A-4A01-BD95-FA4FCCA0F4AD}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Menu" ID="{B10E5C1D-DF84-4F05-BE81-BBFBAE1E62E7}">
+					<ChildrenList>
+						<State Name="None" ID="{D681FAF8-D28C-4A3C-A4E3-17B8D52DA971}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

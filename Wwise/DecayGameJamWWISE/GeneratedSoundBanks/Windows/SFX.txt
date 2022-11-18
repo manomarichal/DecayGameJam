@@ -1,0 +1,21 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1503036824	SFX_Jump_Air			\Default Work Unit\SFX_Jump_Air	
+	1661693364	SFX_Wallslide			\Default Work Unit\SFX_Wallslide	
+	1697048511	SFX_Nut_Impact			\Default Work Unit\SFX_Nut_Impact	
+	1857586793	SFX_Pain			\Default Work Unit\SFX_Pain	
+	2121334968	SFX_Enemy_Die			\Default Work Unit\SFX_Enemy_Die	
+	2373831882	SFX_Fall			\Default Work Unit\SFX_Fall	
+	2398483797	SFX_Jump_Ground			\Default Work Unit\SFX_Jump_Ground	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	23182404	SFX_Jump_Air	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\SFX_Jump_Air_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Jump_Air		192160
+	114396937	SFX_Monster_Die	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\SFX_Monster_Die_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Monster_Die		88160
+	133032018	SFX_Nuts_Impact_01	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\SFX_Nuts_Impact_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Nuts_Impact\SFX_Nuts_Impact_01		144160
+	211664569	SFX_Jump_Ground	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\SFX_Jump_Ground_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Jump_Ground		192160
+	242658147	SFX_Nuts_Impact_04	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\SFX_Nuts_Impact_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Nuts_Impact\SFX_Nuts_Impact_04		144160
+	384756024	SFX_Nuts_Impact_02	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\SFX_Nuts_Impact_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Nuts_Impact\SFX_Nuts_Impact_02		144160
+	738821250	SFX_Fall	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\SFX_Fall_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Fall		192160
+	773835363	SFX_Nuts_Impact_03	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\SFX_Nuts_Impact_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Nuts_Impact\SFX_Nuts_Impact_03		144160
+	799935581	SFX_Pain	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\SFX_Pain_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Pain		192160
+	1070091983	SFX_Wallslide	E:\DecayGameJam\DecayGameJam\Wwise\DecayGameJamWWISE\.cache\Windows\SFX\SFX_Wallslide_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Wallslide		192160
+
