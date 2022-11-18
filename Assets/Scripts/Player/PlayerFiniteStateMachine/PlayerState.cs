@@ -8,7 +8,7 @@ public class PlayerState
     protected Player player;
     protected PlayerStateMachine stateMachine;
     protected PlayerData playerData;
-    
+    protected bool isExitingState;
     private string animBoolName;
     
     protected float startTime;
@@ -24,14 +24,15 @@ public class PlayerState
     public virtual void Enter()
     {
         DoChecks();
-        player.Anim.SetBool(animBoolName, true);
+        player.Anim.Play(animBoolName);
         startTime = Time.time;
-        Debug.Log(animBoolName);
+        isExitingState = false;
+        //Debug.Log(animBoolName);
     }
 
     public virtual void Exit()
     {
-        player.Anim.SetBool(animBoolName, false);
+        isExitingState = true;
     }
 
     public virtual void LogicUpdate()
