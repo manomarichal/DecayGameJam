@@ -35,7 +35,6 @@ public class FallingObject : MonoBehaviour
     {
         if (other.CompareTag("Ground"))
         {
-            Debug.Log("ground");
             Destroy(gameObject);
         }
     }

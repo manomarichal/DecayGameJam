@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerDeathState : PlayerState
 {
-    private RigidbodyConstraints2D _playerConstraints;
     public PlayerDeathState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -13,7 +13,6 @@ public class PlayerDeathState : PlayerState
     {
         base.Enter();
 
-        _playerConstraints = player.Rb.constraints;
         player.Rb.constraints = RigidbodyConstraints2D.FreezeAll;
         
     }
@@ -21,7 +20,7 @@ public class PlayerDeathState : PlayerState
     public void Respawn()
     {
         player.transform.position = player.respawnPosition;
-        player.Rb.constraints = _playerConstraints;
+        player.Rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         player.StateMachine.ChangeState(player.IdleState);
     }
     public override void LogicUpdate()

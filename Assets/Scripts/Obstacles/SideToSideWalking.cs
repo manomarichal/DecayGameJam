@@ -11,7 +11,7 @@ public class SideToSideWalking : MonoBehaviour
     public float sideRaySize;
     public float downRaySize;
 
-    public LayerMask whatIsGround;
+    public LayerMask whatCanInteractWith;
     
     public float walkingSpeed;
 
@@ -20,17 +20,26 @@ public class SideToSideWalking : MonoBehaviour
     
     private int _direction = 1;
 
+    private SpriteRenderer _sr;
+
+    private void Start()
+    {
+        _sr = GetComponent<SpriteRenderer>();
+    }
+
     private void Update()
     {
-        Debug.DrawRay(downRayOrigin.position, new Vector3(0, -5, 0), Color.red, 2f);
-        _isTouchingGround = Physics2D.Raycast(downRayOrigin.position, Vector2.down, downRaySize, whatIsGround);
+        //Debug.DrawRay(downRayOrigin.position, new Vector3(0, downRaySize, 0), Color.red, 2f);
+        _isTouchingGround = Physics2D.Raycast(downRayOrigin.position, Vector2.down, downRaySize, whatCanInteractWith);
        
-        Debug.DrawRay(sideRayOrigin.position, new Vector3(sideRaySize, 0, 0), Color.blue, 0.1f);
-        _isTouchingWall = Physics2D.Raycast(sideRayOrigin.position, Vector2.right*_direction, sideRaySize, whatIsGround);
+        //Debug.DrawRay(sideRayOrigin.position, new Vector3(sideRaySize, 0, 0), Color.blue, 0.1f);
+        _isTouchingWall = Physics2D.Raycast(sideRayOrigin.position, Vector2.right*_direction, sideRaySize, whatCanInteractWith);
         
         if (!_isTouchingGround || _isTouchingWall)
         {   
             _direction *= -1;
+
+            _sr.flipX = !_sr.flipX;
             
             var p = downRayOrigin.localPosition;
             downRayOrigin.localPosition = new Vector3(p.x * -1, p.y, p.z);
