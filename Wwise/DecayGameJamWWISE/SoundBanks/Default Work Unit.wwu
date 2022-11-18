@@ -5,13 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="Music" ID="{537A2D47-F6F4-4301-937F-A28A32E1979A}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Set_State_Part2" ID="{E3BA4CDD-A40B-4391-8408-92521E37C13A}" WorkUnitID="{A465EA83-A860-413A-B60D-47EDD44B5D6F}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Set_State_Part4" ID="{01CA99B2-AEC6-43D4-9DCD-84DAC10BC75A}" WorkUnitID="{A465EA83-A860-413A-B60D-47EDD44B5D6F}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Set_State_Part5" ID="{09ABFEE1-634E-463F-829B-C1E144A9A123}" WorkUnitID="{A465EA83-A860-413A-B60D-47EDD44B5D6F}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Set_State_Part1" ID="{90DDE555-999F-47C6-BCF6-A3CEB5B10EF2}" WorkUnitID="{A465EA83-A860-413A-B60D-47EDD44B5D6F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Music" ID="{214ECBAC-BB27-49E6-B7CB-B55D09606928}" WorkUnitID="{A465EA83-A860-413A-B60D-47EDD44B5D6F}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Set_State_Menu" ID="{C34595C7-55F8-4A6A-B5AB-45C22AAB7B0B}" WorkUnitID="{A465EA83-A860-413A-B60D-47EDD44B5D6F}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Set_State_Part3" ID="{37FED6D2-B032-4AE2-AE04-2D8BD0548A6A}" WorkUnitID="{A465EA83-A860-413A-B60D-47EDD44B5D6F}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

@@ -294,6 +294,50 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<Sound Name="SFX_Ui_Start" ID="{C85D3BD3-0AFB-4254-B4BA-A57BDCB46C76}" ShortID="571215174">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{975859B3-87C7-4981-A82B-3A11D6E34BB7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{471DD279-E928-4FEB-9BBA-24ECB9818191}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_Ui_Start" ID="{6343DD09-7AB6-4CB4-A071-0C55B3C40744}">
+							<Language>SFX</Language>
+							<AudioFile>SFX_Ui_Start.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="926260569"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_Ui_Start" ID="{6343DD09-7AB6-4CB4-A071-0C55B3C40744}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="SFX_Ui_Pause" ID="{2361C39B-65E9-494A-8C47-92076E02B29E}" ShortID="169233997">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{975859B3-87C7-4981-A82B-3A11D6E34BB7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{471DD279-E928-4FEB-9BBA-24ECB9818191}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_Ui_Pause" ID="{62386B47-931E-4578-961D-A710731F4AA1}">
+							<Language>SFX</Language>
+							<AudioFile>SFX_Ui_Pause.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="156432688"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_Ui_Pause" ID="{62386B47-931E-4578-961D-A710731F4AA1}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

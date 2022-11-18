@@ -3150,14 +3150,6 @@
 							<EntryList>
 								<Entry>
 									<Path>
-										<PathElementRef Name="None" ID="{97ACFC53-CEA2-4BD7-A60F-15F46C2CC254}"/>
-									</Path>
-									<AudioNodeInfo>
-										<AudioNodeRef Name="Part 1" ID="{120AC6C7-CB4C-4EBE-A096-493ECF11F81F}" WorkUnitID="{62BF1FF7-52CF-4CEE-B469-CBC30D34D225}" Platform="Linked"/>
-									</AudioNodeInfo>
-								</Entry>
-								<Entry>
-									<Path>
 										<PathElementRef Name="Part1" ID="{8506319A-AA5B-4A55-B3EF-21DDA94D3883}"/>
 									</Path>
 									<AudioNodeInfo>
@@ -3339,6 +3331,12 @@
 										<StateGroupRef Name="Menu" ID="{B10E5C1D-DF84-4F05-BE81-BBFBAE1E62E7}"/>
 									</StateGroupInfo>
 								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Play" ID="{E5D50CBD-9477-4EAB-92A6-799C3A96A8C8}"/>
+										<CustomState Name="" ID="{0800315C-DE89-44A3-9F79-731417C8387C}" ShortID="1003442779"/>
+									</CustomState>
+								</CustomStateList>
 							</StateInfo>
 							<TransitionList>
 								<MusicTransition Name="Root" ID="{9C0C04EE-ADD9-4D96-B505-E95C4F6FE3C9}">
@@ -3359,7 +3357,7 @@
 							<EntryList>
 								<Entry>
 									<Path>
-										<PathElementRef Name="None" ID="{D681FAF8-D28C-4A3C-A4E3-17B8D52DA971}"/>
+										<PathElementRef Name="Play" ID="{E5D50CBD-9477-4EAB-92A6-799C3A96A8C8}"/>
 									</Path>
 									<AudioNodeInfo>
 										<AudioNodeRef Name="Title_Music" ID="{94A3B4C4-ACB7-475A-89D1-ACCAA97337C1}" WorkUnitID="{62BF1FF7-52CF-4CEE-B469-CBC30D34D225}" Platform="Linked"/>
@@ -3376,6 +3374,10 @@
 						</StateGroupList>
 						<CustomStateList>
 							<CustomState>
+								<StateRef Name="Menu" ID="{379952FC-076D-448C-B9D8-B307C6BF379C}"/>
+								<CustomState Name="" ID="{44D4066D-1313-40FD-B292-D405C14D9681}" ShortID="582068390"/>
+							</CustomState>
+							<CustomState>
 								<StateRef Name="In_Game" ID="{A6BA1A38-9B1A-4A01-BD95-FA4FCCA0F4AD}"/>
 								<CustomState Name="" ID="{01EE0305-1576-4271-98E9-6F2B3C05C3C2}" ShortID="742615522"/>
 							</CustomState>
@@ -3388,7 +3390,62 @@
 							</PropertyList>
 							<ChildrenList>
 								<MusicTransition Name="Transition" ID="{A747CE77-03D2-4F02-8387-E84FA32F40F5}">
+									<PropertyList>
+										<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+									</PropertyList>
 									<TransitionInfo/>
+								</MusicTransition>
+								<MusicTransition Name="Transition" ID="{72CDA1C0-94EC-435D-B881-E024CA9379ED}">
+									<PropertyList>
+										<Property Name="DestinationContextType" Type="int16" Value="2"/>
+										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+										<Property Name="SourceContextType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="DestinationContextObject">
+											<ObjectRef Name="Title_Screen" ID="{E622A19B-89D4-403D-844B-A22B2328FEB4}" WorkUnitID="{62BF1FF7-52CF-4CEE-B469-CBC30D34D225}"/>
+										</Reference>
+										<Reference Name="SourceContextObject">
+											<ObjectRef Name="In_Game" ID="{ADBDA059-5DCD-4A02-B5EB-6D225FC8A1BF}" WorkUnitID="{62BF1FF7-52CF-4CEE-B469-CBC30D34D225}"/>
+										</Reference>
+									</ReferenceList>
+									<TransitionInfo>
+										<SourceFadeOut>
+											<MusicFade Name="Source Fade-out" ID="{F5FA2562-4583-4B6A-B3A1-EEBB01106A36}">
+												<PropertyList>
+													<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+													<Property Name="FadeType" Type="int16" Value="1"/>
+												</PropertyList>
+											</MusicFade>
+										</SourceFadeOut>
+									</TransitionInfo>
+								</MusicTransition>
+								<MusicTransition Name="Transition" ID="{496C3C83-D625-49B6-8020-48075F433A3F}">
+									<PropertyList>
+										<Property Name="DestinationContextType" Type="int16" Value="2"/>
+										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+										<Property Name="SourceContextType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="DestinationContextObject">
+											<ObjectRef Name="In_Game" ID="{ADBDA059-5DCD-4A02-B5EB-6D225FC8A1BF}" WorkUnitID="{62BF1FF7-52CF-4CEE-B469-CBC30D34D225}"/>
+										</Reference>
+										<Reference Name="SourceContextObject">
+											<ObjectRef Name="Title_Screen" ID="{E622A19B-89D4-403D-844B-A22B2328FEB4}" WorkUnitID="{62BF1FF7-52CF-4CEE-B469-CBC30D34D225}"/>
+										</Reference>
+									</ReferenceList>
+									<TransitionInfo>
+										<SourceFadeOut>
+											<MusicFade Name="Source Fade-out" ID="{A1784BD0-FF38-4B10-97EB-BD30D3E7C892}">
+												<PropertyList>
+													<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+													<Property Name="FadeType" Type="int16" Value="1"/>
+												</PropertyList>
+											</MusicFade>
+										</SourceFadeOut>
+									</TransitionInfo>
 								</MusicTransition>
 								<MusicTransition Name="Transition" ID="{64C3BABE-39C1-4D56-B4DD-AED3CA2A64E4}">
 									<PropertyList>
@@ -3472,18 +3529,18 @@
 					<EntryList>
 						<Entry>
 							<Path>
-								<PathElementRef Name="None" ID="{D403ED7C-C15C-4C5F-90C5-6341D31B19AF}"/>
-							</Path>
-							<AudioNodeInfo>
-								<AudioNodeRef Name="Title_Screen" ID="{E622A19B-89D4-403D-844B-A22B2328FEB4}" WorkUnitID="{62BF1FF7-52CF-4CEE-B469-CBC30D34D225}" Platform="Linked"/>
-							</AudioNodeInfo>
-						</Entry>
-						<Entry>
-							<Path>
 								<PathElementRef Name="In_Game" ID="{A6BA1A38-9B1A-4A01-BD95-FA4FCCA0F4AD}"/>
 							</Path>
 							<AudioNodeInfo>
 								<AudioNodeRef Name="In_Game" ID="{ADBDA059-5DCD-4A02-B5EB-6D225FC8A1BF}" WorkUnitID="{62BF1FF7-52CF-4CEE-B469-CBC30D34D225}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Menu" ID="{379952FC-076D-448C-B9D8-B307C6BF379C}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Title_Screen" ID="{E622A19B-89D4-403D-844B-A22B2328FEB4}" WorkUnitID="{62BF1FF7-52CF-4CEE-B469-CBC30D34D225}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 					</EntryList>

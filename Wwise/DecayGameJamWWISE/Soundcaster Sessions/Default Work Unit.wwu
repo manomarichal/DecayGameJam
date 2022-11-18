@@ -12,9 +12,9 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="In_Game" ID="{A6BA1A38-9B1A-4A01-BD95-FA4FCCA0F4AD}"/>
-						<CurrentStateRef Name="Part5" ID="{B8B2F3C9-BDE7-47A6-BC03-95808B94E74F}"/>
-						<CurrentStateRef Name="None" ID="{D681FAF8-D28C-4A3C-A4E3-17B8D52DA971}"/>
+						<CurrentStateRef Name="Menu" ID="{379952FC-076D-448C-B9D8-B307C6BF379C}"/>
+						<CurrentStateRef Name="Part1" ID="{8506319A-AA5B-4A55-B3EF-21DDA94D3883}"/>
+						<CurrentStateRef Name="Play" ID="{E5D50CBD-9477-4EAB-92A6-799C3A96A8C8}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

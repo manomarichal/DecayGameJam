@@ -5,6 +5,36 @@
 			<ChildrenList>
 				<Event Name="Music" ID="{214ECBAC-BB27-49E6-B7CB-B55D09606928}">
 					<ChildrenList>
+						<Action Name="" ID="{6CF23542-2A15-473D-8C48-AB31DDDE8B6D}" ShortID="492686846">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu" ID="{379952FC-076D-448C-B9D8-B307C6BF379C}" WorkUnitID="{5758FF2D-39CC-46A4-B0ED-DE83781545B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F4989E99-74FF-4A0F-816E-E21B2E3E1129}" ShortID="355532332">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play" ID="{E5D50CBD-9477-4EAB-92A6-799C3A96A8C8}" WorkUnitID="{5758FF2D-39CC-46A4-B0ED-DE83781545B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{362B2583-C95E-42A1-A4B2-3A069353B40F}" ShortID="83160344">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Part1" ID="{8506319A-AA5B-4A55-B3EF-21DDA94D3883}" WorkUnitID="{5758FF2D-39CC-46A4-B0ED-DE83781545B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{B26A0C24-3C87-4DEE-A45C-84FD0DBF875B}" ShortID="1013359045">
 							<ReferenceList>
 								<Reference Name="Target">
@@ -101,17 +131,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Ui_Start_Game" ID="{B7465ABC-B897-48B9-8585-EC285F21588F}">
+				<Event Name="Ui_Start" ID="{B7465ABC-B897-48B9-8585-EC285F21588F}">
 					<ChildrenList>
-						<Action Name="" ID="{D18AE77E-FBB8-4FD7-B36B-ABD55F93DBF8}" ShortID="472839163"/>
+						<Action Name="" ID="{D18AE77E-FBB8-4FD7-B36B-ABD55F93DBF8}" ShortID="472839163">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Ui_Start" ID="{C85D3BD3-0AFB-4254-B4BA-A57BDCB46C76}" WorkUnitID="{40E2034F-3F71-4EF0-92A2-2155466B4EB9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Ui_Pause" ID="{A7516BAC-0F12-4724-8D32-5817AF496F8B}">
 					<ChildrenList>
-						<Action Name="" ID="{ABBAE5FB-8F69-4DA2-83CF-95E573CFF017}" ShortID="926374052"/>
+						<Action Name="" ID="{ABBAE5FB-8F69-4DA2-83CF-95E573CFF017}" ShortID="926374052">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Ui_Pause" ID="{2361C39B-65E9-494A-8C47-92076E02B29E}" WorkUnitID="{40E2034F-3F71-4EF0-92A2-2155466B4EB9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="SFX_Nuts_Shoot" ID="{917A5C76-9479-4384-85FC-07811C8F865E}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
