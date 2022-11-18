@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5758FF2D-39CC-46A4-B0ED-DE83781545B3}" SchemaVersion="110">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{5758FF2D-39CC-46A4-B0ED-DE83781545B3}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="In_Game" ID="{C97AD8CA-CD6C-492D-8F97-A01AB3887319}">
+					<ChildrenList>
+						<State Name="None" ID="{97ACFC53-CEA2-4BD7-A60F-15F46C2CC254}"/>
+						<State Name="Part1" ID="{8506319A-AA5B-4A55-B3EF-21DDA94D3883}"/>
+						<State Name="Part2" ID="{48A6B59F-3F4E-4CAE-8D57-F8D290AF6F2D}"/>
+						<State Name="Part5" ID="{B8B2F3C9-BDE7-47A6-BC03-95808B94E74F}"/>
+						<State Name="Part4" ID="{0BA9578A-4B51-429D-8BDD-051CC37599D6}"/>
+						<State Name="Part3" ID="{37F3EE93-F3B3-4EE6-9FB8-E03057332923}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>
