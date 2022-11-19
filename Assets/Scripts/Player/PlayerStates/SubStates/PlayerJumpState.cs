@@ -16,6 +16,8 @@ public class PlayerJumpState : PlayerAbilityState
         player.SetVelocityY(playerData.jumpVelocity);
         isAbilityDone = true;
         amountOfJumpsLeft--;
+
+        player.Sm.jump.Post(player.gameObject);
     }
 
     public bool CanJump()

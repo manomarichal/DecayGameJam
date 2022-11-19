@@ -7,6 +7,7 @@ public class BranchSpawner : MonoBehaviour
 {
     public float spawnInterval = 2;
     public GameObject branchPrefab;
+    public Camera cam;
     
     private float _lastSpawnTime;
 
@@ -21,7 +22,8 @@ public class BranchSpawner : MonoBehaviour
 
     void spawnBranch()
     {
-        Instantiate(branchPrefab, transform.position, Quaternion.identity);
+        GameObject branch = Instantiate(branchPrefab, transform.position, Quaternion.identity);
+        branch.GetComponent<FallingObject>().Initialize(cam);
     } 
         
     private void Update()

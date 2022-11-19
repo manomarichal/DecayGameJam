@@ -12,8 +12,12 @@ public class PlayerRangedAttackState : PlayerAbilityState
     public override void Enter()
     {
         base.Enter();
-        GameObject acorn = GameObject.Instantiate(playerData.acornPrefab, player.transform.position, Quaternion.identity);
+        
+        GameObject acorn = GameObject.Instantiate(playerData.acornPrefab, player.rangedAttackPosition.position, Quaternion.identity);
         acorn.GetComponent<Acorn>().Initialize(player.FacingDirection);
+
+        player.Sm.nutShot.Post(player.gameObject);
+        
         isAbilityDone = true;
     }
 

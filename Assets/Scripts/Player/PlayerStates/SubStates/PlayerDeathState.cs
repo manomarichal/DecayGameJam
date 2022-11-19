@@ -13,6 +13,7 @@ public class PlayerDeathState : PlayerState
     {
         base.Enter();
 
+        player.Sm.death.Post(player.gameObject);
         player.Rb.constraints = RigidbodyConstraints2D.FreezeAll;
         
     }

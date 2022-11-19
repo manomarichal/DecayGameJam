@@ -18,7 +18,7 @@ MonoBehaviour:
   jumpVelocity: 6
   amountOfJumps: 2
   gravityScale: 1.5
-  linearDamp: 0
+  airFriction: 0.05
   wallJumpVelocity: {x: 4, y: 6}
   wallSlideVelocity: 1
   wallSlideLetGoDelay: 0.5

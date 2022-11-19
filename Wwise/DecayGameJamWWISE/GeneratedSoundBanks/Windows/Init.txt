@@ -1,13 +1,20 @@
 State Group	ID	Name			Wwise Object Path	Notes
+	2607556080	Menu			\Default Work Unit\Menu	
 	2967546505	In_Game			\Default Work Unit\In_Game	
+	3991942870	Music			\Default Work Unit\Music	
 
 State	ID	Name	State Group			Notes
+	748895195	None	Menu			
+	1256202815	Play	Menu			
 	748895195	None	In_Game			
 	3177314144	Part2	In_Game			
 	3177314145	Part3	In_Game			
 	3177314147	Part1	In_Game			
 	3177314150	Part4	In_Game			
 	3177314151	Part5	In_Game			
+	748895195	None	Music			
+	2607556080	Menu	Music			
+	2967546505	In_Game	Music			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	504532776	Brick			\Factory Acoustic Textures\Textures\Brick	

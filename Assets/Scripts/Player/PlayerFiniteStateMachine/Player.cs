@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     public PlayerWallJumpState WallJumpState { get; private set; }
     public PlayerRangedAttackState RangedAttackState { get; private set; }
     public PlayerDeathState DeathState { get; private set; }
+    public PlayerEndLevelState EndLevelState { get; private set; }
     [SerializeField] private PlayerData _playerData;
    
     #endregion
@@ -28,7 +29,7 @@ public class Player : MonoBehaviour
     public PlayerInputHandler InputHandler { get; private set; }
     public Rigidbody2D Rb { get; private set; }
     public SpriteRenderer Sr { get; private set; }
-    
+    public PlayerSoundManager Sm { get; private set; }
     #endregion
 
     #region  Check Transforms
@@ -44,7 +45,8 @@ public class Player : MonoBehaviour
     public Vector2 CurrentVelocity { get; private set; }
     public Camera mainCamera;
     public Vector3 respawnPosition;
-
+    public Transform rangedAttackPosition;
+    
     private Vector2 tempVelocity;
     private float _RangedAttackStartTime;
     
@@ -65,6 +67,7 @@ public class Player : MonoBehaviour
         WallJumpState = new PlayerWallJumpState(this, StateMachine, _playerData, "Jump");
         RangedAttackState = new PlayerRangedAttackState(this, StateMachine, _playerData, "RangedAttack");
         DeathState = new PlayerDeathState(this, StateMachine, _playerData, "Death");
+        EndLevelState = new PlayerEndLevelState(this, StateMachine, _playerData, "Move");
     }
     
     // Start is called before the first frame update
@@ -74,6 +77,7 @@ public class Player : MonoBehaviour
         InputHandler = GetComponent<PlayerInputHandler>();
         Rb = GetComponent<Rigidbody2D>();
         Sr = GetComponent<SpriteRenderer>();
+        Sm = GetComponent<PlayerSoundManager>();
         
         FacingDirection = 1;
         _RangedAttackStartTime = Time.time;
@@ -86,7 +90,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        Rb.drag = _playerData.linearDamp;
         CurrentVelocity = Rb.velocity;
         StateMachine.CurrentState.LogicUpdate();
     }
@@ -174,7 +177,7 @@ public class Player : MonoBehaviour
 
     private bool CheckIfCanDoRangedAttack()
     {
-        return _RangedAttackStartTime + _playerData.rangedAttackCooldown < Time.time;
+        return _playerData.canRangedAttack && (_RangedAttackStartTime + _playerData.rangedAttackCooldown < Time.time);
     }
     public void RangedAttack()
     {

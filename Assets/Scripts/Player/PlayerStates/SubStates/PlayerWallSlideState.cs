@@ -21,7 +21,8 @@ public class PlayerWallSlideState : PlayerTouchingWallState
         base.LogicUpdate();
         player.SetVelocityY(-playerData.wallSlideVelocity);
         player.SetVelocityX(0);
-
+        
+        
         if (player.InputHandler.jumpInput && !isExitingState)
         {
             player.InputHandler.ConsumeJumpInput();

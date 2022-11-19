@@ -10,6 +10,9 @@ public class FallingObject : MonoBehaviour
     public float rotationSpeed = 1;
     public float maxDistance = 50f;
     
+    public AK.Wwise.Event hitFloor;
+
+    private Camera _cam;
     private float _distanceTravelled;
 
     private void Start()
@@ -17,6 +20,10 @@ public class FallingObject : MonoBehaviour
         transform.Rotate(new Vector3(0, 0,Random.Range(0, 360)));
     }
 
+    public void Initialize(Camera cam)
+    {
+        _cam = cam;
+    }
     private void Update()
     {
         var distance = fallingSpeed * Time.deltaTime;
@@ -35,6 +42,11 @@ public class FallingObject : MonoBehaviour
     {
         if (other.CompareTag("Ground"))
         {
+            Vector3 viewPos = _cam.WorldToViewportPoint(transform.position);
+            if (viewPos.x >= 0 && viewPos.x <= 1 && viewPos.y >= 0 && viewPos.y <= 1 && viewPos.z > 0)
+            {
+                hitFloor.Post(gameObject);
+            }
             Destroy(gameObject);
         }
     }

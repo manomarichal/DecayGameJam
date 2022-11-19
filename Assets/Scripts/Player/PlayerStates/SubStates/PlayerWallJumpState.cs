@@ -14,6 +14,7 @@ public class PlayerWallJumpState : PlayerState
         base.Enter();
         player.SetVelocityY(playerData.wallJumpVelocity.y);
         player.SetVelocityX(playerData.wallJumpVelocity.x * player.WallSlideState.SlideDirection *-1);
+        player.Sm.jumpAir.Post(player.gameObject);
     }
 
     public override void LogicUpdate()

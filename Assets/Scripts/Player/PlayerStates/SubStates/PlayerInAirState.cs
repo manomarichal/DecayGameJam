@@ -46,8 +46,22 @@ public class PlayerInAirState : PlayerState
         }
         else
         {
-            player.CheckIfShouldFlip(xInput);
-            player.AddVelocityX(playerData.movementVelocity * xInput);
+            if (xInput == 0)
+            {
+                if (Mathf.Abs(player.CurrentVelocity.x) < 0.05f)
+                {
+                    player.SetVelocityX(0);
+                }
+                else
+                {
+                    player.AddVelocityX(-Mathf.Sign(player.CurrentVelocity.x)*playerData.airFriction);
+                }
+            }
+            else
+            {
+                player.CheckIfShouldFlip(xInput);
+                player.AddVelocityX(playerData.movementVelocity * xInput);
+            }
         }
     }
 

@@ -95,7 +95,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{31BEA26C-AFFA-7ECF-22BF-0FEE0DEACFB7}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{50206F8F-EDDD-B9E8-44B5-B60D6DE96127}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -108,6 +108,12 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 			<StateGroups>
+				<StateGroup Id="2607556080" Name="Menu">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1256202815" Name="Play"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="2967546505" Name="In_Game">
 					<States>
 						<State Id="748895195" Name="None"/>
@@ -118,15 +124,14 @@
 						<State Id="3177314151" Name="Part5"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="3991942870" Name="Music">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="2607556080" Name="Menu"/>
+						<State Id="2967546505" Name="In_Game"/>
+					</States>
+				</StateGroup>
 			</StateGroups>
-			<SwitchGroups>
-				<SwitchGroup Id="3773774313" Name="Music_Game_State">
-					<Switches>
-						<Switch Id="2607556080" Name="Menu"/>
-						<Switch Id="2967546505" Name="In_Game"/>
-					</Switches>
-				</SwitchGroup>
-			</SwitchGroups>
 			<AcousticTextures>
 				<AcousticTexture Id="504532776" Name="Brick">
 					<Properties>
@@ -242,7 +247,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{30B7E212-ABDD-BB6A-B2A0-B4B74DF2DC7F}">
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{E2332F2A-6189-2340-6CB9-6042A62646E7}">
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
 			<Media>
@@ -414,6 +419,10 @@
 					<ShortName>Music\Part 1\Part1_MainSynth_140bpm_8bars.wav</ShortName>
 					<CachePath>SFX/Music/Part 1/Part1_MainSynth_140bpm_8bars_D79FB2B7.wem</CachePath>
 				</File>
+				<File Id="981631304" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Music\titlescreendestructending8bit.wav</ShortName>
+					<CachePath>SFX/Music/titlescreendestructending8bit_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="983178204" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Music\Intro\Intro_Chords_140bpm_8bars.wav</ShortName>
 					<CachePath>SFX/Music/Intro/Intro_Chords_140bpm_8bars_D79FB2B7.wem</CachePath>
@@ -437,7 +446,13 @@
 					</MediaRefs>
 					<SwitchContainers>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="3773774313" Id="2967546505"/>
+							<SwitchValue GroupType="State" GroupId="3991942870" Id="2967546505"/>
+							<MediaRefs>
+								<MediaRef Id="28399385"/>
+								<MediaRef Id="328805332"/>
+								<MediaRef Id="460592813"/>
+								<MediaRef Id="487190095"/>
+							</MediaRefs>
 							<Children>
 								<SwitchContainer>
 									<SwitchValue GroupType="State" GroupId="2967546505" Id="3177314147"/>
@@ -507,40 +522,32 @@
 								</SwitchContainer>
 							</Children>
 						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3991942870" Id="2607556080"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="2607556080" Id="1256202815"/>
+									<MediaRefs>
+										<MediaRef Id="981631304"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
 					</SwitchContainers>
-				</Event>
-				<Event Id="2302270969" Name="Set_State_Menu" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
-					<ActionSetSwitch>
-						<ActionSetSwitchEntry GroupId="3773774313" Id="2607556080" Name="Menu"/>
-					</ActionSetSwitch>
-				</Event>
-				<Event Id="3081231600" Name="Set_State_Part1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
+						<ActionSetStateEntry GroupId="2607556080" Id="1256202815" Name="Play"/>
+						<ActionSetStateEntry GroupId="3991942870" Id="2607556080" Name="Menu"/>
 						<ActionSetStateEntry GroupId="2967546505" Id="3177314147" Name="Part1"/>
-					</ActionSetState>
-				</Event>
-				<Event Id="3081231603" Name="Set_State_Part2" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
-					<ActionSetState>
-						<ActionSetStateEntry GroupId="2967546505" Id="3177314144" Name="Part2"/>
-					</ActionSetState>
-				</Event>
-				<Event Id="3081231602" Name="Set_State_Part3" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
-					<ActionSetState>
-						<ActionSetStateEntry GroupId="2967546505" Id="3177314145" Name="Part3"/>
-					</ActionSetState>
-				</Event>
-				<Event Id="3081231605" Name="Set_State_Part4" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
-					<ActionSetState>
-						<ActionSetStateEntry GroupId="2967546505" Id="3177314150" Name="Part4"/>
-					</ActionSetState>
-				</Event>
-				<Event Id="3081231604" Name="Set_State_Part5" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
-					<ActionSetState>
-						<ActionSetStateEntry GroupId="2967546505" Id="3177314151" Name="Part5"/>
 					</ActionSetState>
 				</Event>
 			</Events>
 			<StateGroups>
+				<StateGroup Id="2607556080" Name="Menu">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1256202815" Name="Play"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="2967546505" Name="In_Game">
 					<States>
 						<State Id="748895195" Name="None"/>
@@ -551,16 +558,15 @@
 						<State Id="3177314151" Name="Part5"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="3991942870" Name="Music">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="2607556080" Name="Menu"/>
+						<State Id="2967546505" Name="In_Game"/>
+					</States>
+				</StateGroup>
 			</StateGroups>
-			<SwitchGroups>
-				<SwitchGroup Id="3773774313" Name="Music_Game_State">
-					<Switches>
-						<Switch Id="2607556080" Name="Menu"/>
-						<Switch Id="2967546505" Name="In_Game"/>
-					</Switches>
-				</SwitchGroup>
-			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{7F90274A-0B00-3804-9FE5-0B25CB9A560E}</FileHash>
+	<FileHash>{CA8A60CA-F483-6EED-7ABE-ED915550064C}</FileHash>
 </SoundBanksInfo>

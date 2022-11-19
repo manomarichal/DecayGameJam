@@ -14,7 +14,7 @@ public class PlayerData : ScriptableObject
     public float jumpVelocity = 15f;
     public int amountOfJumps = 3;
     public float gravityScale = 2f;
-    public float linearDamp = 0f;
+    public float airFriction = 0.1f;
 
     [Header("Wall Jumps")]
     public Vector2 wallJumpVelocity = new Vector2(20, 20);

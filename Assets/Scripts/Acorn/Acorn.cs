@@ -10,7 +10,7 @@ public class Acorn : MonoBehaviour
     private int _direction = 1;
     private bool _isInitialized = false;
     private float _distanceTravelled;
-    
+
     public void Initialize(int direction)
     {
         _direction = direction;

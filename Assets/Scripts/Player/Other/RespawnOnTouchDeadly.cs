@@ -13,5 +13,9 @@ public class RespawnOnTouchDeadly : MonoBehaviour
         {
             player.StateMachine.ChangeState(player.DeathState);
         }
+        else if (other.gameObject.CompareTag("Respawn"))
+        {
+            player.respawnPosition = other.transform.position;
+        }
     }
 }
