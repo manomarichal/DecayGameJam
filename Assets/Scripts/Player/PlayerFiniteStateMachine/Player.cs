@@ -13,7 +13,6 @@ public class Player : MonoBehaviour
     public PlayerMoveState MoveState { get; private set; }
     public PlayerJumpState JumpState { get; private set; }
     public PlayerInAirState InAirState { get; private set; }
-    public PlayerWallClimbState WallClimbState { get; private set; }
     public PlayerWallSlideState WallSlideState { get; private set; }
     public PlayerWallJumpState WallJumpState { get; private set; }
     public PlayerRangedAttackState RangedAttackState { get; private set; }
@@ -62,7 +61,6 @@ public class Player : MonoBehaviour
         MoveState = new PlayerMoveState(this, StateMachine, _playerData, "Move");
         JumpState = new PlayerJumpState(this, StateMachine, _playerData, "Jump");
         InAirState = new PlayerInAirState(this, StateMachine, _playerData, "Jump");
-        WallClimbState = new PlayerWallClimbState(this, StateMachine, _playerData, "Jump");
         WallSlideState = new PlayerWallSlideState(this, StateMachine, _playerData, "Wallslide");
         WallJumpState = new PlayerWallJumpState(this, StateMachine, _playerData, "Jump");
         RangedAttackState = new PlayerRangedAttackState(this, StateMachine, _playerData, "RangedAttack");
@@ -123,6 +121,21 @@ public class Player : MonoBehaviour
         tempVelocity.Set(angle.x * velocity * direction, angle.y * velocity);
         Rb.velocity = tempVelocity;
         CurrentVelocity = tempVelocity;
+    }
+
+    public void SetData(PlayerData newData)
+    {
+        _playerData = newData;
+
+        IdleState.playerData = _playerData;
+        JumpState.playerData = _playerData;
+        MoveState.playerData = _playerData;
+        DeathState.playerData = _playerData;
+        InAirState.playerData = _playerData;
+        WallSlideState.playerData = _playerData;
+        WallJumpState.playerData = _playerData;
+        RangedAttackState.playerData = _playerData;
+        DeathState.playerData = _playerData;
     }
     
     #endregion

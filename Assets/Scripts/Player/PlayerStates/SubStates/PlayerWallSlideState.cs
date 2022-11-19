@@ -14,6 +14,7 @@ public class PlayerWallSlideState : PlayerTouchingWallState
     {
         base.Enter();
         SlideDirection = player.FacingDirection;
+        player.JumpState.ResetAmountOfJumpsLeft();
     }
 
     public override void LogicUpdate()

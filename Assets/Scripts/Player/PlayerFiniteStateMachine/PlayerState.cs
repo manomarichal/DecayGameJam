@@ -7,7 +7,7 @@ public class PlayerState
 {
     protected Player player;
     protected PlayerStateMachine stateMachine;
-    protected PlayerData playerData;
+    public PlayerData playerData;
     protected bool isExitingState;
     private string animBoolName;
     

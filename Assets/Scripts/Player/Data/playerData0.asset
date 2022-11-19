@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: playerData0
   m_EditorClassIdentifier: 
   movementVelocity: 0.25
-  maxHorizontalVelocity: 3.5
+  maxHorizontalVelocity: 4
   friction: 0.4
   jumpVelocity: 6
   amountOfJumps: 2
