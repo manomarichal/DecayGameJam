@@ -15,11 +15,11 @@ MonoBehaviour:
   movementVelocity: 0.25
   maxHorizontalVelocity: 2.5
   friction: 0.4
-  jumpVelocity: 4
+  jumpVelocity: 4.5
   amountOfJumps: 1
   gravityScale: 1
   airFriction: 0.05
-  wallJumpVelocity: {x: 3, y: 4}
+  wallJumpVelocity: {x: 3, y: 4.5}
   wallSlideVelocity: 1
   wallSlideLetGoDelay: 0.5
   wallJumpTime: 0.1
