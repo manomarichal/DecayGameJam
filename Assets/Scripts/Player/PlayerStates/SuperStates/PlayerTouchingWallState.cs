@@ -52,6 +52,7 @@ public class PlayerTouchingWallState : PlayerState
         }
         if (!isTouchingWall || (_trigger && Time.time - _xInputStartTime > playerData.wallSlideLetGoDelay))
         {
+            player.JumpState.DecreaseAmountOfJumpsLeft();
             stateMachine.ChangeState(player.InAirState);
         }
     }
