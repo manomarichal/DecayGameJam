@@ -40,8 +40,12 @@ public class PlayerTouchingWallState : PlayerState
             stateMachine.ChangeState(player.IdleState);
             return;
         }
-        
-        if (!_trigger && xInput != player.FacingDirection)
+
+        if (xInput == -player.FacingDirection)
+        {
+            stateMachine.ChangeState(player.InAirState);
+        }
+        if (!_trigger && xInput == 0)
         {
             _xInputStartTime = Time.time;
             _trigger = true;

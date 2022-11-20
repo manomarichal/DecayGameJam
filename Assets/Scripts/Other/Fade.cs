@@ -14,18 +14,16 @@ public class Fade : MonoBehaviour
     {
         _anim = GetComponent<Animator>();
         _sr = GetComponent<SpriteRenderer>();
-        _sr.enabled = false;
+        _sr.enabled = true;
     }
 
     public void FadeIn()
     {
-        _sr.enabled = true;
         _anim.Play("FadeIn");
     }
     
     public void FadeOut()
     {
-        _sr.enabled = true;
         _anim.Play("FadeOut");
     }
 }
