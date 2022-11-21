@@ -48,17 +48,14 @@ public class VMovingPlatform : MonoBehaviour
     {
         _direction *= -1;
         // update start & end points since value might be changed during runtime
-        _bottomY = _startY;
-        _topY = _startY + moveDistance;
     }
-    private void Update()
+    private void FixedUpdate()
     {
         Move();
         if ((_direction == 1 && transform.position.y >= _topY) || (_direction == -1 && transform.position.y <= _bottomY))
         {
             FlipDirection();
         }
-        
         Accelerate();
     }
 

@@ -122,21 +122,7 @@ public class Player : MonoBehaviour
         Rb.velocity = tempVelocity;
         CurrentVelocity = tempVelocity;
     }
-
-    public void SetData(PlayerData newData)
-    {
-        _playerData = newData;
-
-        IdleState.playerData = _playerData;
-        JumpState.playerData = _playerData;
-        MoveState.playerData = _playerData;
-        DeathState.playerData = _playerData;
-        InAirState.playerData = _playerData;
-        WallSlideState.playerData = _playerData;
-        WallJumpState.playerData = _playerData;
-        RangedAttackState.playerData = _playerData;
-        DeathState.playerData = _playerData;
-    }
+    
     
     #endregion
     

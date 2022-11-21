@@ -19,7 +19,7 @@ MonoBehaviour:
   amountOfJumps: 1
   gravityScale: 1
   airFriction: 0.05
-  wallJumpVelocity: {x: 2, y: 3}
+  wallJumpVelocity: {x: 2, y: 3.4}
   wallSlideVelocity: 1
   wallSlideLetGoDelay: 0.5
   wallJumpTime: 0.1

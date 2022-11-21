@@ -23,8 +23,8 @@ public class LevelEnd : MonoBehaviour
     {
         setInGame.SetValue();
         setMusicInGame.SetValue();
-        
         Invoke(nameof(FadeOnStart), 1);
+        Application.targetFrameRate = 60;
     }
 
     private void FadeOnStart()
